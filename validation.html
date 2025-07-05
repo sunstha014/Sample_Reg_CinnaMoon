@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form & Usability</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/d9ddf8a7c6.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <form class="search-bar">
+      <input type="text" placeholder="Search..." aria-label="Search">
+      <button type="submit" aria-label="Submit search"><i class="fa-regular fa-magnifying-glass"></i></button>
+    </form>
+  </header>
+
+  <div class="background"></div>
+
+  <main class="container">
+    <aside class="left-content">
+      <img src="img/logo.svg" alt="Logo" />
+      <h2>CinnaMoon</h2>
+      <p>Join Our Community Today! <br>
+        Sign up to connect, share, and grow with like-minded individuals. Enjoy exclusive features, personalized content, and a vibrant social experience—all in one place.</p>
+      <div class="soc-icon">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </aside>
+
+    <section class="reg-box">
+      <div class="form-box">
+        <form method="post" action="/register" name="register" novalidate>
+          <h2>Let's Begin</h2>
+
+          <div class="input-field">
+            <input type="text" id="name" name="name" required />
+            <label for="name">Username</label>
+            <span class="icon"><i class="fa-solid fa-user"></i></span>
+          </div>
+
+          <div class="field email-field">
+            <div class="input-field">
+              <input type="email" id="email" name="email" class="email" required />
+              <label for="email">Email</label>
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            </div>
+            <span class="error email-error">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p class="error-text">Please enter a valid email</p>
+            </span>
+          </div>
+
+          <div class="field create-password">
+            <div class="input-field">
+              <input type="password" id="password" name="password" class="password" required />
+              <label for="password">Password</label>
+              <span class="eye"><i class="fa-regular fa-eye"></i></span>
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+            </div>
+            <span class="error password-error">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p class="error-text">Enter at least 8 characters with number, symbol, small and capital letter.</p>
+            </span>
+          </div>
+
+          <div class="field confirm-password">
+            <div class="input-field">
+              <input type="password" id="cPassword" name="cPassword" class="cPassword" required />
+              <label for="cPassword">Confirm Password</label>
+              <span class="eye"><i class="fa-regular fa-eye"></i></span>
+              <span class="icon"><i class="fa-solid fa-lock"></i></span>
+            </div>
+            <span class="error cPassword-error">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <p class="error-text">Passwords don't match</p>
+            </span>
+          </div>
+
+          <div class="register">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
